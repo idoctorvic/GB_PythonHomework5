@@ -13,9 +13,11 @@ def Rec_sum(a, b):
         a, b = b, a
     if b == 0:
         return a
-    return a + Rec_sum(a, b - 1)
+    #summa = a
+    a = Rec_sum(a, b - 1) + 1
+    return a
 
-a = int(input())
-b = int(input())
+a = int(input('1: '))
+b = int(input('2: '))
 
-print(Rec_sum(a, b))
+print(f'The sum of {a} and {b} is {Rec_sum(a, b)}')
